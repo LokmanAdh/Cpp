@@ -15,7 +15,7 @@ Welcome to my C++ Programming repository! As a student passionate about learning
 You can clone this repository using the following command:
 
 ```bash
-git clone https://github.com/ismailza/Cpp-Programming.git
+git clone https://github.com/LokmanAdh/Cpp.git
 ````
 
 Then, navigate to the cloned directory to access the content. You can run C++ programs by compiling them with a C++ compiler like g++.
