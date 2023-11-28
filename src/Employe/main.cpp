@@ -2,10 +2,10 @@
 
 int  main()
 {
-    Individu I("Ismail", "ZAHIR", 23);
+    Individu I("Lokman", "Adhaim", 23);
     I.affiche();
 
-    Employe E("Jalal Eddine","OUTGOUGA",23,14000);
+    Employe E("Adhaim","Lokman",23,14000);
     E.affiche();
 
 
