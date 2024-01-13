@@ -2,7 +2,7 @@
 #include <fstream>
 #include <map>
 #include <string>
-#include <sstream>
+#include <regex>
 #include <chrono>
 
 
@@ -17,12 +17,18 @@ map<string, int> MotOccurences(string text){
 
 
     string line;
-    while (getline(inputFile, line)) {
-        istringstream iss(line);
-        string word;
+    regex wordRegex(R"([a-zA-Z]+)");
 
-        while (iss >> word) {
+    while (getline(inputFile, line)) {
+        smatch matches;
+        auto wordsBegin = sregex_iterator(line.begin(), line.end(), wordRegex);
+        auto wordsEnd = sregex_iterator();
+
+        for (sregex_iterator i = wordsBegin; i != wordsEnd; ++i) {
+            string word = (*i).str();
+
             for (char &c : word) c = tolower(c);
+
             MotCounter[word]++;
         }
     }
